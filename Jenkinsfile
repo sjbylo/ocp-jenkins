@@ -11,7 +11,7 @@ node {
         input "Go alive with application?"
     }
     stage("Go Live") {
-        openshiftTag srcStream: appx, srcTag: 'latest', destinationStream: 'appx', destinationTag: 'PRODready', namespace: "appx-dev"
+        openshiftTag srcStream: 'appx', srcTag: 'latest', destinationStream: 'appx', destinationTag: 'PRODready', namespace: "appx-dev"
         openshiftVerifyDeployment deploymentConfig: 'appx', namespace: "appx-prod"
     }
 }
