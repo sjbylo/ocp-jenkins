@@ -8,7 +8,7 @@ node {
         openshiftVerifyDeployment deploymentConfig: 'appx', namespace: "appx-test"
     }
     stage("Approval") {
-        input message: "Go live with application? Approve?", id: "approval"
+        input message: "Go live with application?"
     }
     stage("Go Live") {
         openshiftTag srcStream: appx, srcTag: 'latest', destinationStream: 'appx', destinationTag: 'PRODready', namespace: "appx-dev"
