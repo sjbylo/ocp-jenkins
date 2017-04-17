@@ -6,7 +6,7 @@ spec:
   source:
     type: "Git"
     git:
-      uri: "https://github.com/mglantz/ocp-jenkins.git"
+      uri: "https://github.com/sjbylo/ocp-jenkins.git"
   strategy:
     type: "JenkinsPipeline"
     jenkinsPipelineStrategy:
