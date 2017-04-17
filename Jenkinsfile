@@ -7,6 +7,6 @@ node {
         input "Go alive with application?"
     }
     stage("Deploy") {
-        openshiftDeployment deploymentConfig: 'appx'
+        openshiftDeploy deploymentConfig: 'appx'
     }
 }
